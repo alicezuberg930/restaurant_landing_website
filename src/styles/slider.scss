@@ -1,0 +1,96 @@
+.slider-wrapper {
+    width: 100%;
+    height: fit-content;
+    overflow: hidden;
+    position: relative;
+
+    &:hover .prev-button {
+        opacity: 1;
+        transform: translateX(-2%);
+    }
+
+    &:hover .next-button {
+        opacity: 1;
+        transform: translateX(2%);
+    }
+
+    .slider-nav {
+        display: flex;
+        transition: .5s ease-in-out;
+    }
+
+    .prev-button {
+        left: 2%;
+        transform: translateX(20%);
+
+        .button-icon {
+            background-image: url('/assets/arrow-left.png')
+        }
+    }
+
+    .next-button {
+        right: 2%;
+        transform: translateX(20%);
+
+        .button-icon {
+            background-image: url('/assets/arrow-right.png')
+        }
+    }
+
+    .prev-button,
+    .next-button {
+        background-color: transparent;
+        border: none;
+        bottom: 40%;
+        color: #111;
+        cursor: pointer;
+        margin: 0;
+        opacity: 0;
+        padding: 0;
+        position: absolute;
+        top: 40%;
+        transition: .5s ease-in-out;
+        // width: 36px;
+
+        .button-icon {
+            width: 68px;
+            height: 68px;
+            max-height: none;
+            border-width: 0;
+            max-width: none;
+            background-size: 50%;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+    }
+
+    .page-dots {
+        bottom: 15px;
+        left: 20%;
+        line-height: 1;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        position: absolute;
+        right: 20%;
+        text-align: center;
+
+        .dot {
+            width: 32px;
+            height: 32px;
+            background-image: url('/assets/dot.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            border-width: 0;
+            background-color: transparent !important;
+            display: inline-block;
+            margin: 0 5px;
+            transition: .3s ease-in-out;
+        }
+
+        .dot.is-selected {
+            background-image: url('/assets/dot-active.png');
+        }
+    }
+}
