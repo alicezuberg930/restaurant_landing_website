@@ -153,10 +153,10 @@ const CustomSlider: React.FC<Settings> = ({
             </div>
             {showButton &&
                 <>
-                    <button onClick={prevSlide} className={`prev-button`}>
+                    <button onClick={prevSlide} className='prev-button'>
                         <div className="button-icon"></div>
                     </button>
-                    <button onClick={nextSlide} className={`next-button`}>
+                    <button onClick={nextSlide} className='next-button'>
                         <div className="button-icon"></div>
                     </button>
                 </>

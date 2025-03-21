@@ -1,20 +1,22 @@
 .slider-wrapper {
     width: 100%;
-    height: fit-content;
+    height: auto;
     overflow: hidden;
     position: relative;
+    z-index: 99;
 
     &:hover .prev-button {
         opacity: 1;
-        transform: translateX(-2%);
+        left: 3%;
     }
 
     &:hover .next-button {
         opacity: 1;
-        transform: translateX(2%);
+        right: 3%;
     }
 
     .slider-nav {
+        position: relative;
         display: flex;
         transition: .5s ease-in-out;
     }

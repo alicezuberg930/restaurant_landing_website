@@ -1,6 +1,7 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --primary-color: #c5aa89;
 }
 
 @theme inline {
