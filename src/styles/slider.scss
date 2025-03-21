@@ -23,7 +23,6 @@
 
     .prev-button {
         left: 2%;
-        transform: translateX(20%);
 
         .button-icon {
             background-image: url('/assets/arrow-left.png')
@@ -32,7 +31,6 @@
 
     .next-button {
         right: 2%;
-        transform: translateX(20%);
 
         .button-icon {
             background-image: url('/assets/arrow-right.png')

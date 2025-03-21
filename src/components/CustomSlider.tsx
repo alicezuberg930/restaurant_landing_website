@@ -10,11 +10,10 @@ export interface Settings {
     responsive?: { breakpoint: number, slidesToShow?: number, customMargin?: number }[],
     showDot?: boolean,
     showButton?: boolean,
-    currentSlide?: number | null
 }
 
 const CustomSlider: React.FC<Settings> = ({
-    children, slidesToShow = 1, autoplay = false, autoplaySpeed = 3000, infinite = true, responsive = [], showDot = true, showButton = true, currentSlide = null
+    children, slidesToShow = 1, autoplay = false, autoplaySpeed = 3000, infinite = true, responsive = [], showDot = true, showButton = true
 }) => {
     const [currentIndex, setCurrentIndex] = useState(0)
     const sliderRef = useRef<HTMLDivElement>(null)
@@ -45,12 +44,6 @@ const CustomSlider: React.FC<Settings> = ({
         window.addEventListener("resize", updateSlidesToShow)
         return () => window.removeEventListener("resize", updateSlidesToShow)
     }, [])
-
-    useEffect(() => {
-        if (currentSlide != null) {
-            setCurrentIndex(currentSlide)
-        }
-    }, [currentSlide])
 
     const nextSlide = () => {
         if (currentIndex < totalSlides - visibleSlides) {
@@ -166,9 +159,9 @@ const CustomSlider: React.FC<Settings> = ({
             {showDot ?
                 <ol className='page-dots'>
                     {
-                        React.Children.map(children, (child, i) => {
+                        Array.from({ length: (totalSlides - slidesToShow) + 1 }).map((_, i) => {
                             return (
-                                <li key={i} className={`dot ${currentIndex == i ? 'is-selected' : ''}`}></li>
+                                <li key={i} onClick={() => setCurrentIndex(i)} className={`dot ${currentIndex == i ? 'is-selected' : ''}`}></li>
                             )
                         })
                     }
