@@ -6,12 +6,12 @@
     z-index: 99;
 
     &:hover .prev-button {
-        opacity: 1;
+        opacity: .6;
         left: 3%;
     }
 
     &:hover .next-button {
-        opacity: 1;
+        opacity: .6;
         right: 3%;
     }
 
@@ -23,74 +23,55 @@
 
     .prev-button {
         left: 2%;
-
-        .button-icon {
-            background-image: url('/assets/arrow-left.png')
-        }
     }
 
     .next-button {
         right: 2%;
-
-        .button-icon {
-            background-image: url('/assets/arrow-right.png')
-        }
     }
 
     .prev-button,
     .next-button {
-        background-color: transparent;
+        background-color: black;
         border: none;
-        bottom: 40%;
+        border-radius: 50%;
         color: #111;
         cursor: pointer;
-        margin: 0;
         opacity: 0;
-        padding: 0;
         position: absolute;
-        top: 40%;
+        top: 50%;
+        transform: translateX(-50%);
         transition: .5s ease-in-out;
-        // width: 36px;
-
-        .button-icon {
-            width: 68px;
-            height: 68px;
-            max-height: none;
-            border-width: 0;
-            max-width: none;
-            background-size: 50%;
-            background-repeat: no-repeat;
-            background-position: center;
-        }
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 68px;
+        height: 68px;
     }
 
     .page-dots {
+        left: 50%;
+        transform: translateX(-50%);
+        width: fit-content;
         bottom: 15px;
-        left: 20%;
         line-height: 1;
         list-style: none;
         margin: 0;
         padding: 0;
         position: absolute;
-        right: 20%;
         text-align: center;
+        display: flex;
 
         .dot {
-            width: 32px;
-            height: 32px;
-            background-image: url('/assets/dot.png');
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-position: center;
-            border-width: 0;
-            background-color: transparent !important;
-            display: inline-block;
-            margin: 0 5px;
-            transition: .3s ease-in-out;
+            margin: 0 8px;
+            background-color: #958e88;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
         }
 
         .dot.is-selected {
-            background-image: url('/assets/dot-active.png');
+            border: 2px solid white;
+            background: red;
         }
     }
 }

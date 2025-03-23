@@ -1,6 +1,7 @@
 'use client'
 import React, { useState, useRef, useEffect } from "react"
 import '@/styles/slider.scss'
+import { icons } from "@/common/icons"
 export interface Settings {
     children?: React.ReactNode,
     slidesToShow: number,
@@ -15,6 +16,7 @@ export interface Settings {
 const CustomSlider: React.FC<Settings> = ({
     children, slidesToShow = 1, autoplay = false, autoplaySpeed = 3000, infinite = true, responsive = [], showDot = true, showButton = true
 }) => {
+    const { FaChevronLeft, FaChevronRight } = icons
     const [currentIndex, setCurrentIndex] = useState(0)
     const sliderRef = useRef<HTMLDivElement>(null)
     const totalSlides = React.Children.count(children)
@@ -147,10 +149,10 @@ const CustomSlider: React.FC<Settings> = ({
             {showButton &&
                 <>
                     <button onClick={prevSlide} className='prev-button'>
-                        <div className="button-icon"></div>
+                        <FaChevronLeft size={16} fill="white" />
                     </button>
                     <button onClick={nextSlide} className='next-button'>
-                        <div className="button-icon"></div>
+                        <FaChevronRight size={16} fill="white" />
                     </button>
                 </>
             }
