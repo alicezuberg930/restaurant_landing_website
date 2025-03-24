@@ -200,3 +200,9 @@ export const contents = [
         'description': 'Phasellus lorem enim, luctus ut velit eget, con-vallis egestas eros.'
     }
 ]
+
+export const banners = [
+    "/assets/banners/slide1-01.jpg",
+    "/assets/banners/master-slides-02.jpg",
+    "/assets/banners/master-slides-01.jpg",
+]

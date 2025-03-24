@@ -54,7 +54,6 @@
         width: fit-content;
         bottom: 15px;
         line-height: 1;
-        list-style: none;
         margin: 0;
         padding: 0;
         position: absolute;
@@ -70,7 +69,7 @@
         }
 
         .dot.is-selected {
-            border: 2px solid white;
+            // border: 2px solid white;
             background: red;
         }
     }

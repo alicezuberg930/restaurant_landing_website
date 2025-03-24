@@ -30,7 +30,7 @@ const Header: React.FC = () => {
             title: "About"
         }
     ]
-    const [isTop, setIsTop] = useState<boolean>(false)
+    const [isTop, setIsTop] = useState<boolean>(true)
     const [y, setY] = useState<number>(0)
 
     useEffect(() => {
@@ -38,14 +38,14 @@ const Header: React.FC = () => {
             setY(window.scrollY)
         }
         window.addEventListener("scroll", handleScroll)
-        return () => {
-            window.removeEventListener("scroll", handleScroll)
-        }
+        // return () => {
+        //     window.removeEventListener("scroll", handleScroll)
+        // }
     }, []);
 
     useEffect(() => {
-        if (y > 0) setIsTop(true)
-        if (y == 0) setIsTop(false)
+        if (y > 0) setIsTop(false)
+        if (y == 0) setIsTop(true)
     }, [y])
 
     return (

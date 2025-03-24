@@ -1,0 +1,100 @@
+.bg-title-page {
+    text-align: center;
+    width: 100%;
+    min-height: 550px;
+    background-repeat: no-repeat;
+    background-position: center 0;
+    background-size: cover;
+    background-image: url('/assets/bg-title-page-02.jpg');
+    align-content: center;
+}
+
+.section-contact {
+    padding: 120px 0;
+    background-image: url('/assets/pattern1.png');
+    background-repeat: repeat;
+
+    .map-container {
+        max-width: 1280px;
+        margin: auto;
+
+        .map {
+            border-radius: 10px;
+            border: 5px solid white;
+
+        }
+    }
+
+    .contact-container {
+        max-width: 1280px;
+        margin: auto;
+
+        .message-container {
+            margin: 65px 0;
+            text-align: center;
+        }
+
+        .wrap-form-reservation {
+            .input-wrapper {
+                margin-top: 5px;
+                width: 100%;
+                height: 50px;
+                margin-top: 5px;
+                margin-bottom: 20px;
+                overflow: hidden;
+
+                input {
+                    border-radius: 10px;
+                    border: 1px solid transparent;
+                    padding-left: 10px;
+                    width: 100%;
+                    height: 100%;
+
+                    &:focus {
+                        border: 1px solid red;
+                    }
+                }
+            }
+
+            textarea {
+                margin-top: 5px;
+                border-radius: 10px;
+                border: 1px solid transparent;
+                padding: 10px;
+                width: 100%;
+                height: 100%;
+
+                &:focus {
+                    border: 1px solid red;
+                }
+            }
+
+            .wrap-btn-booking {
+                margin: 50px 0;
+                text-align: center;
+
+                button {
+                    background: #111111;
+                    border-radius: 10px;
+                    width: 120px;
+                    height: 40px;
+                }
+            }
+        }
+
+        .contact-item {
+            margin-left: 20px;
+            display: flex;
+
+            .contact-icon {
+                padding-right: 30px;
+            }
+
+            .details {
+                margin-top: 12px;
+                display: block;
+                max-width: 190px;
+            }
+        }
+    }
+}

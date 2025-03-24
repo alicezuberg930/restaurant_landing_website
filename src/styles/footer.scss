@@ -1,0 +1,28 @@
+.footer {
+    background-color: #222222;
+
+    .footer-container {
+        padding: 70px 0;
+        max-width: 1280px;
+        margin: auto;
+
+        .wrap-gallery-footer {
+            display: flex;
+            flex-wrap: wrap;
+
+            .item-gallery-footer {
+                display: block;
+                position: relative;
+                width: calc((100% - 50px) / 4);
+                margin-right: 10px;
+                margin-bottom: 10px;
+
+                img {
+                    vertical-align: middle;
+                    border-style: none;
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
