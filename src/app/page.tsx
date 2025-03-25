@@ -38,13 +38,13 @@ export default function Home() {
               <div key={banner} className="banner-item">
                 <img src={banner} />
                 <div className="wrap-content-slide">
-                  <span className="caption-slide-1" data-appear="rollIn">
+                  <span className="caption-slide-1 animated-ltr">
                     Chào mừng đến
                   </span>
-                  <h2 className="caption-slide-2" data-appear="lightSpeedIn">
+                  <h2 className="caption-slide-2 animated-ltr">
                     Soái ca
                   </h2>
-                  <div className="wrap-btn-slide" data-appear="slideInUp">
+                  <div className="wrap-btn-slide animated-btt">
                     <Link href="/" className="button">
                       Xem menu
                     </Link>

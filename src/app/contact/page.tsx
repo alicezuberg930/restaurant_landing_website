@@ -6,7 +6,7 @@ const ContactPage = () => {
     return (
         <div>
             <section className="bg-title-page">
-                <h2 className="title-6">Contact</h2>
+                <h2 className="title-6">Liên hệ</h2>
             </section>
             <section className='section-contact'>
                 <div className='map-container'>
@@ -18,26 +18,26 @@ const ContactPage = () => {
                 </div>
                 <div className='contact-container'>
                     <div className='message-container'>
-                        <h3 className="title-7">Send us a Message</h3>
+                        <h3 className="title-7">Gửi tin nhắn cho chúng tôi</h3>
                     </div>
                     <form className="wrap-form-reservation">
                         <div className="row">
                             <div className="col-md-4">
                                 <span className="txt9">Name</span>
                                 <div className="input-wrapper">
-                                    <input className="bo-rad-10 sizefull txt10 p-l-20" type="text" name="name" placeholder="Name" />
+                                    <input className="" type="text" name="name" placeholder="Name" />
                                 </div>
                             </div>
                             <div className="col-md-4">
                                 <span className="txt9">Email</span>
                                 <div className="input-wrapper">
-                                    <input className="bo-rad-10 sizefull txt10 p-l-20" type="text" name="email" placeholder="Email" />
+                                    <input className="" type="text" name="email" placeholder="Email" />
                                 </div>
                             </div>
                             <div className="col-md-4">
                                 <span className="txt9">Phone</span>
                                 <div className="input-wrapper">
-                                    <input className="bo-rad-10 sizefull txt10 p-l-20" type="text" name="phone" placeholder="Phone" />
+                                    <input className="" type="text" name="phone" placeholder="Phone" />
                                 </div>
                             </div>
                             <div className="col-12">

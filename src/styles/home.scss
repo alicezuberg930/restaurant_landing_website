@@ -504,22 +504,7 @@
                 text-align: center;
                 padding: 200px 0;
 
-                .title-2 {
-                    font-family: Courgette;
-                    font-size: 30px;
-                    line-height: 1.2;
-                    color: #d61c22;
-                }
-
                 .title-4 {
-                    font-family: Poppins;
-                    font-weight: 700;
-                    font-size: 50px;
-                    line-height: 1.2;
-                    color: white;
-                    text-transform: uppercase;
-                    letter-spacing: 10px;
-                    word-spacing: 6px;
                     padding-top: 5px;
                 }
 
@@ -646,3 +631,37 @@
 //     opacity: 1;
 //     transform: scale3d(1, 1, 1);
 // }
+
+@keyframes slideLeftToRight {
+    0% {
+        opacity: 0;
+        transform: translateX(-1000px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.animated-ltr {
+    opacity: 0;
+    animation: slideLeftToRight 2s ease infinite;
+}
+
+@keyframes slideBottomToTop {
+    0% {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animated-btt {
+    opacity: 0;
+    animation: slideBottomToTop 2s ease infinite;
+}
